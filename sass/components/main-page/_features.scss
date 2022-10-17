@@ -1,0 +1,38 @@
+.features-list {
+  display: flex;
+}
+
+.features-list__thumb {
+  display: flex;
+  padding: 25px 100px;
+  margin-bottom: 30px;
+
+  width: 270px;
+  height: 120px;
+  background-color: $secondary-background-color;
+  border-radius: 4px;
+}
+
+.features-list__item {
+  width: calc((100% - 90px) / 4);
+
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+.features-list__title {
+  margin-bottom: 10px;
+  color: $primary-text-color;
+
+  @include font(14px, 1.14);
+  text-transform: uppercase;
+}
+
+.features-list__text {
+  margin: 0;
+
+  color: $secondary-text-color;
+
+  @include font(14px, 1.7);
+}

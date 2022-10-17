@@ -1,0 +1,74 @@
+.page-footer {
+  background-color: $primary-background-color;
+}
+
+.page-footer__container {
+  display: flex;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.adress-container {
+  margin-right: 70px;
+}
+
+.page-footer__logo {
+  margin-bottom: 20px;
+
+  color: $primary-white-color;
+}
+
+.address-list {
+  font-style: normal;
+}
+
+.address-list__item:not(:last-child) {
+  margin-bottom: 9px;
+}
+
+.address-list__link {
+  display: block;
+
+  color: $primary-white-color;
+
+  font-weight: 400;
+  @include font(14px, 1.7);
+
+  @include transition(color);
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+
+.address-list__link--contact {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.footer__join-text {
+  display: inline-block;
+  margin-bottom: 20px;
+
+  @include font(14px, 1.14);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: $primary-white-color;
+}
+
+.join-container__list {
+  margin: 0;
+}
+
+.join-container__link {
+  background-color: rgba(255, 255, 255, 0.1);
+
+  @include transition(background-color);
+}
+
+.join-container__icon {
+  fill: $primary-white-color;
+}
+
+@import './join-form';
