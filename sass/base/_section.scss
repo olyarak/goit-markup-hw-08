@@ -1,0 +1,20 @@
+.section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+// .section--no-padding {
+//   padding-top: 0;
+// }
+.section--background {
+  background-color: $secondary-background-color;
+}
+
+.section__title {
+  margin-bottom: 30px;
+
+  color: $primary-text-color;
+
+  @include font(28px, 1.17);
+  text-align: center;
+}
