@@ -1,12 +1,17 @@
 .clients-list {
   display: flex;
+  flex-wrap: wrap;
+  margin: -15px;
 }
-.clients-list__item:not(:last-child) {
-  margin-right: 30px;
+
+.clients-list__item {
+  flex-basis: calc((100% - 4 * 15px) / 2);
+  margin: 15px;
 }
+
 .clients-list__link {
   display: flex;
-  width: 170px;
+  width: 210px;
   height: 92px;
   align-items: center;
   justify-content: center;
