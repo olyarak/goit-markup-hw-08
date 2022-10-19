@@ -1,5 +1,11 @@
 .features-list__thumb {
-  padding: 25px 190px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+
+  max-width: 450px;
   margin-bottom: 30px;
 
   background-color: $secondary-background-color;
