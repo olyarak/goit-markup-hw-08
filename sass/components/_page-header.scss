@@ -14,17 +14,18 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 796px;
+  width: 100vw;
+  height: 100vh;
   z-index: 999;
-  padding: 48px 0 48px 40px;
+  padding: 48px 40px 48px 40px;
   background-color: $primary-white-color;
-  overflow-y: scroll;
+  overflow: scroll;
 
   transform: translateX(100%);
   @include transition(transform);
 
   &.is-open {
+    display: block;
     transform: translateX(0);
   }
 }
@@ -157,6 +158,6 @@
 }
 
 .socila-mobile__link {
-  @include font(22px, 1.2);
+  @include font(18px, 1.2);
   color: $accent-color;
 }
