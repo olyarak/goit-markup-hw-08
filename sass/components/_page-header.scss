@@ -36,12 +36,12 @@
   align-items: center;
   justify-content: center;
 
-  margin-right: 15px;
   margin-left: auto;
   padding: 0;
   background-color: transparent;
   cursor: pointer;
   border: none;
+  color: currentColor;
 
   &.js-close-menu {
     position: absolute;
@@ -54,8 +54,8 @@
   fill: currentColor;
   @include transition(color);
 
-  &:hover,
-  &:focus {
+  .navigation__toggle:hover &,
+  .navigation__toggle:focus & {
     color: $accent-color;
   }
 }

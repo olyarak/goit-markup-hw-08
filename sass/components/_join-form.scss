@@ -8,9 +8,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-left: 15px;
-  padding-right: 15px;
   width: 100%;
+
+  // @media screen and (min-width: 480px) {
+  //   width: 450px;
+  // }
 }
 
 .form-join__field {
@@ -31,10 +33,6 @@
 
   &:focus-within {
     border-color: $accent-color;
-  }
-
-  @media screen and (min-width: 480px) {
-    width: 450px;
   }
 }
 
