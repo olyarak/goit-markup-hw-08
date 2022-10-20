@@ -1,12 +1,12 @@
 .hero-section {
   // background-color: #c4c4c4;
-  // width: 480px;
-  // margin-right: auto;
-  // margin-left: auto;
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
     url('../images/hero/hero-mob.jpg');
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   background-position: center;
   color: $primary-white-color;
 }
@@ -16,9 +16,13 @@
   flex-direction: column;
   align-items: center;
   padding-top: 60px;
-  padding-left: 60px;
+  padding-bottom: 60px;
 
   text-align: center;
+
+  @media screen and (min-width: 480px) {
+    width: 480px;
+  }
 }
 
 .hero-section__title {
