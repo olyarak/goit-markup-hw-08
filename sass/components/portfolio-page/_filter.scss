@@ -1,14 +1,15 @@
 .filter-list {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 25px;
+  margin-bottom: 40px;
 
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 767px) {
     max-width: 326px;
   }
 
   @include tablet {
     justify-content: center;
+    margin-bottom: 30px;
   }
 }
 

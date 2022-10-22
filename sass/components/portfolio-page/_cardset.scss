@@ -1,7 +1,10 @@
-// .portfolio-list {
-//   display: flex;
-//   flex-wrap: wrap;
-// }
+.portfolio-list {
+  @include tablet {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
+}
 
 .card {
   display: flex;
@@ -9,6 +12,11 @@
   align-items: center;
 
   @include transition(box-shadow);
+
+  @include tablet {
+    margin: 15px;
+    width: calc((100% - 4 * 15px) / 2);
+  }
 
   &:hover,
   &:focus {
@@ -24,11 +32,11 @@
 .card__wrap {
   position: relative;
   overflow: hidden;
-  text-align: center;
 }
 
 .card__image {
   display: block;
+  max-width: 100%;
 }
 
 .card__descr {
@@ -38,9 +46,10 @@
   height: 100%;
   transform: translateY(101%);
 
+  display: flex;
+  align-items: center;
   margin: 0;
-  padding-top: 77px;
-  padding-bottom: 77px;
+  padding-left: 24px;
   @include font(18px, 1.5);
   color: $primary-white-color;
   background-color: rgba(33, 150, 243, 0.9);
