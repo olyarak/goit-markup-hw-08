@@ -9,7 +9,7 @@
   margin: 15px;
 
   @include tablet {
-    flex-basis: calc((100% - 4 * 15px) / 3);
+    flex-basis: calc((100% - 6 * 15px) / 3);
   }
 }
 

@@ -2,16 +2,18 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: calc(100% - 2 * 15px);
+
+  @include mobile {
+    width: 450px;
+  }
 }
 
 .form-join {
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  @include mobile {
-    width: 450px;
-  }
+  width: 100%;
 }
 
 .form-join__field {

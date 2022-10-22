@@ -101,5 +101,10 @@
     padding: 0;
     fill: currentColor;
     margin-right: 8px;
+
+    &.email {
+      width: 14px;
+      height: 10px;
+    }
   }
 }

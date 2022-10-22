@@ -1,8 +1,15 @@
 .filter-list {
   display: flex;
   flex-wrap: wrap;
-  max-width: 326px;
   margin-bottom: 25px;
+
+  @media screen and (max-width: 480px) {
+    max-width: 326px;
+  }
+
+  @include tablet {
+    justify-content: center;
+  }
 }
 
 .filter-list__item {
