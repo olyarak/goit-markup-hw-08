@@ -4,11 +4,6 @@ body {
   font-family: "Roboto", sans-serif;
   letter-spacing: 0.03em;
 }
-@media screen and (min-width: 320px) {
-  body {
-    overflow-x: hidden;
-  }
-}
 
 h1,
 h2,
@@ -394,9 +389,10 @@ h6 {
 }
 
 .hero-section {
-  max-width: 480px;
   margin-left: auto;
   margin-right: auto;
+  padding-top: 60px;
+  padding-bottom: 60px;
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/hero/hero-mob.jpg");
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/hero-mob.jpg");
   background-repeat: no-repeat;
@@ -412,9 +408,10 @@ h6 {
 }
 @media screen and (min-width: 768px) {
   .hero-section {
-    max-width: 768px;
     background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/hero/hero-tab.jpg");
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/hero-tab.jpg");
+    padding-top: 118px;
+    padding-bottom: 118px;
   }
 }
 @media screen and (min-width: 768px) and (min-devide-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
@@ -428,6 +425,8 @@ h6 {
     max-width: 1600px;
     background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/hero/hero-desk.jpg");
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/hero-desk.jpg");
+    padding-top: 200px;
+    padding-bottom: 200px;
   }
 }
 @media screen and (min-width: 1200px) and (min-devide-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
@@ -448,20 +447,7 @@ h6 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-top: 60px;
-  padding-bottom: 60px;
   text-align: center;
-}
-@media screen and (min-width: 768px) {
-  .hero-container {
-    padding-top: 118px;
-    padding-bottom: 118px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .hero-container {
-    padding: 200px 252px;
-  }
 }
 
 .hero-section__title {

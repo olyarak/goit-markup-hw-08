@@ -1,7 +1,8 @@
 .hero-section {
-  max-width: 480px;
   margin-left: auto;
   margin-right: auto;
+  padding-top: 60px;
+  padding-bottom: 60px;
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
     url('../images/hero/hero-mob.jpg');
   background-repeat: no-repeat;
@@ -15,9 +16,10 @@
   }
 
   @include tablet {
-    max-width: 768px;
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
       url('../images/hero/hero-tab.jpg');
+    padding-top: 118px;
+    padding-bottom: 118px;
 
     @include retina {
       background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
@@ -30,6 +32,9 @@
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
       url('../images/hero/hero-desk.jpg');
 
+    padding-top: 200px;
+    padding-bottom: 200px;
+
     @include retina {
       background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
         url('../images/hero/hero-desk-2x.jpg');
@@ -41,21 +46,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 60px;
-  padding-bottom: 60px;
 
   text-align: center;
-
-  @include tablet {
-    padding-top: 118px;
-    padding-bottom: 118px;
-  }
-
-  @include desktop {
-    padding: 200px 252px;
-    // padding-top: 200px;
-    // padding-bottom: 200px;
-  }
 }
 
 .hero-section__title {
