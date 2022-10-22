@@ -7,14 +7,18 @@
 .clients-list__item {
   flex-basis: calc((100% - 4 * 15px) / 2);
   margin: 15px;
+
+  @include tablet {
+    flex-basis: calc((100% - 4 * 15px) / 3);
+  }
 }
 
 .clients-list__link {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding-top: 16px;
+  padding-bottom: 16px;
 
   border: 1px solid #afb1b8;
   border-radius: 4px;

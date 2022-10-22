@@ -1,7 +1,10 @@
-// .team-list {
-//   display: flex;
-//   text-align: center;
-// }
+.team-list {
+  @include tablet {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
+}
 
 .team-list__item {
   display: flex;
@@ -14,12 +17,20 @@
     0px 2px 1px rgba(0, 0, 0, 0.2);
   background-color: $primary-white-color;
 
-  &:not(:last-child) {
-    margin-bottom: 30px;
+  @media screen and (max-width: 767px) {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+
+  @include tablet {
+    margin: 15px;
+    width: calc((100% - 4 * 15px) / 2);
   }
 }
 
 .team-list__image {
+  max-width: 100%;
   display: block;
   margin-bottom: 30px;
 }

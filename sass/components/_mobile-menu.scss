@@ -1,0 +1,133 @@
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 999;
+  padding: 48px 40px 48px 40px;
+  background-color: $primary-white-color;
+  overflow: scroll;
+
+  transform: translateX(100%);
+  @include transition(transform);
+
+  &.is-open {
+    display: block;
+    transform: translateX(0);
+  }
+
+  .nav-list {
+    margin-bottom: 302px;
+  }
+
+  .nav-list__item:not(:last-child) {
+    margin-bottom: 32px;
+  }
+
+  .navigation__link {
+    color: $primary-text-color;
+    font-weight: 500;
+    @include font(40px, 1.17);
+    letter-spacing: 0.02em;
+
+    @include transition(color);
+
+    &:hover,
+    &:focus {
+      color: $accent-color;
+    }
+  }
+
+  .navigation__link--current {
+    color: $accent-color;
+  }
+
+  .contact-list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contact-list__item {
+    margin-bottom: 32px;
+    &.accent {
+      order: -1;
+    }
+    &:not(:last-child) {
+      margin-bottom: 64px;
+    }
+  }
+
+  .contact-list__link {
+    color: $secondary-text-color;
+    @include font(24px, 1.17);
+
+    &.accent {
+      color: $accent-color;
+      font-size: 34px;
+    }
+  }
+
+  .contact-list__icon {
+    display: none;
+  }
+}
+
+.navigation__toggle {
+  min-height: 40px;
+  min-width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-left: auto;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  color: currentColor;
+
+  &.js-close-menu {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+  }
+
+  @include tablet {
+    display: none;
+  }
+}
+
+.navigation__icon {
+  fill: currentColor;
+  @include transition(color);
+
+  .navigation__toggle:hover &,
+  .navigation__toggle:focus & {
+    color: $accent-color;
+  }
+}
+
+.social-mobile {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.social-mobile__item {
+  display: flex;
+
+  &:not(:last-child)::after {
+    content: '';
+    display: block;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 1px;
+    height: 22px;
+    background-color: rgba(33, 33, 33, 0.2);
+  }
+}
+
+.socila-mobile__link {
+  @include font(18px, 1.2);
+  color: $accent-color;
+}

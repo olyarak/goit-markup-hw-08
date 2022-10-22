@@ -4,6 +4,10 @@
   font-family: 'Raleway';
   font-weight: 700;
   @include font(24px, 1.2);
+
+  @include tablet {
+    margin-right: 87px;
+  }
 }
 
 .page-header__logo {

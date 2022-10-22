@@ -3,6 +3,11 @@
   border-bottom: 1px solid #ececec;
   padding-top: 16px;
   padding-bottom: 16px;
+
+  @include tablet {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
 }
 
 .navigation {
@@ -11,153 +16,90 @@
 }
 
 .mobile-menu {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: 999;
-  padding: 48px 40px 48px 40px;
-  background-color: $primary-white-color;
-  overflow: scroll;
-
-  transform: translateX(100%);
-  @include transition(transform);
-
-  &.is-open {
-    display: block;
-    transform: translateX(0);
+  @include tablet {
+    display: none;
   }
 }
 
-.navigation__toggle {
-  min-height: 40px;
-  min-width: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  margin-left: auto;
-  padding: 0;
-  background-color: transparent;
-  cursor: pointer;
-  border: none;
-  color: currentColor;
-
-  &.js-close-menu {
-    position: absolute;
-    top: 10px;
-    right: 15px;
-  }
-}
-
-.navigation__icon {
-  fill: currentColor;
-  @include transition(color);
-
-  .navigation__toggle:hover &,
-  .navigation__toggle:focus & {
-    color: $accent-color;
-  }
-}
-// .navigation {
-//   display: flex;
-//   align-items: center;
-// }
-
-.nav-list {
-  margin-bottom: 302px;
-}
-
-.nav-list__item:not(:last-child) {
-  margin-bottom: 32px;
-}
-
-.navigation__link {
-  position: relative;
-
-  color: $primary-text-color;
-  font-weight: 500;
-  @include font(40px, 1.17);
-  letter-spacing: 0.02em;
-
-  @include transition(color);
-
-  &:hover,
-  &:focus {
-    color: $accent-color;
-  }
-}
-
-.navigation__link--current {
-  color: $accent-color;
-
-  // &::after {
-  //   content: '';
-
-  //   position: absolute;
-  //   bottom: -1px;
-  //   left: 0;
-  //   width: 100%;
-  //   height: 4px;
-  //   border-radius: 2px;
-  //   background-color: $accent-color;
-  // }
-}
-
-.contact-list {
-  display: flex;
-  flex-direction: column;
-}
-
-.contact-list__item {
-  margin-bottom: 32px;
-  &.accent {
-    order: -1;
-  }
-  &:last-child {
-    margin-bottom: 64px;
-  }
-}
-
-.contact-list__link {
-  color: $secondary-text-color;
-  @include font(24px, 1.17);
-
-  &.accent {
-    color: $accent-color;
-    font-size: 34px;
-  }
-}
-
-.contact-list__icon {
+.menu {
   display: none;
-  // padding: 0;
-  // fill: currentColor;
-  // align-items: center;
-  // margin-right: 10px;
-}
 
-.social-mobile {
-  display: flex;
-}
-
-.social-mobile__item {
-  display: flex;
-  align-items: center;
-
-  &:not(:last-child)::after {
-    content: '';
-    display: block;
-    margin-left: 10px;
-    margin-right: 10px;
-    width: 1px;
-    height: 22px;
-    background-color: rgba(33, 33, 33, 0.2);
+  @include tablet {
+    display: flex;
+    align-items: center;
   }
-}
 
-.socila-mobile__link {
-  @include font(18px, 1.2);
-  color: $accent-color;
+  .nav-list {
+    display: flex;
+    margin-right: 96px;
+
+    & .navigation__link {
+      padding-top: 32px;
+      padding-bottom: 32px;
+    }
+  }
+
+  .nav-list__item:not(:last-child) {
+    margin-right: 50px;
+  }
+
+  .navigation__link {
+    position: relative;
+    color: $primary-text-color;
+    font-weight: 500;
+    @include font(14px, 1.17);
+    letter-spacing: 0.02em;
+
+    @include transition(color);
+
+    &:hover,
+    &:focus {
+      color: $accent-color;
+    }
+  }
+
+  .navigation__link--current {
+    color: $accent-color;
+
+    @include tablet {
+      &::after {
+        content: '';
+
+        position: absolute;
+        bottom: -1px;
+        left: 0;
+        width: calc(100% + 6px);
+        height: 4px;
+        border-radius: 2px;
+        background-color: $accent-color;
+      }
+    }
+  }
+
+  .contact-list {
+  }
+
+  .contact__item {
+  }
+
+  .contact-list__item:not(:last-child) {
+    margin-bottom: 10px;
+  }
+
+  .contact-list__link {
+    display: flex;
+    align-items: center;
+    color: $secondary-text-color;
+    @include font(14px, 1.5);
+
+    @include tablet {
+      font-size: 12px;
+    }
+  }
+
+  .contact-list__icon {
+    padding: 0;
+    fill: currentColor;
+    margin-right: 8px;
+  }
 }
