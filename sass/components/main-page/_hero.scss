@@ -14,6 +14,12 @@
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
       url('../images/hero/hero-tab.jpg');
   }
+
+  @include desktop {
+    max-width: 1600px;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url('../images/hero/hero-desk.jpg');
+  }
 }
 
 .hero-container {
@@ -29,6 +35,12 @@
     padding-top: 118px;
     padding-bottom: 118px;
   }
+
+  @include desktop {
+    padding: 200px 252px;
+    // padding-top: 200px;
+    // padding-bottom: 200px;
+  }
 }
 
 .hero-section__title {
@@ -38,6 +50,10 @@
   @include font(26px, 1.6);
   letter-spacing: 0.06em;
   text-transform: uppercase;
+
+  @include desktop {
+    @include font(44px, 1.4);
+  }
 }
 
 .hero-section__btn {
@@ -54,4 +70,8 @@
   letter-spacing: 0.06em;
 
   cursor: pointer;
+
+  @include desktop {
+    padding: 10px 32px;
+  }
 }

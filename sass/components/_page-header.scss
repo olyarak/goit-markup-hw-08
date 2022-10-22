@@ -33,6 +33,10 @@
     display: flex;
     margin-right: 96px;
 
+    @include desktop {
+      margin-right: 312px;
+    }
+
     & .navigation__link {
       padding-top: 32px;
       padding-bottom: 32px;
@@ -64,10 +68,9 @@
     @include tablet {
       &::after {
         content: '';
-
         position: absolute;
         bottom: -1px;
-        left: 0;
+        left: -3px;
         width: calc(100% + 6px);
         height: 4px;
         border-radius: 2px;
@@ -77,23 +80,31 @@
   }
 
   .contact-list {
-  }
-
-  .contact__item {
+    @include desktop {
+      display: flex;
+    }
   }
 
   .contact-list__item:not(:last-child) {
     margin-bottom: 10px;
+
+    @include desktop {
+      margin-bottom: 0;
+
+      &:not(:last-child) {
+        margin-right: 30px;
+      }
+    }
   }
 
   .contact-list__link {
     display: flex;
     align-items: center;
     color: $secondary-text-color;
-    @include font(14px, 1.5);
+    @include font(12px, 1.5);
 
-    @include tablet {
-      font-size: 12px;
+    @include desktop {
+      font-size: 14px;
     }
   }
 
@@ -101,10 +112,17 @@
     padding: 0;
     fill: currentColor;
     margin-right: 8px;
+    @include desktop {
+      margin-right: 10px;
+      &.email {
+        width: 16px;
+        height: 12px;
+      }
 
-    &.email {
-      width: 14px;
-      height: 10px;
+      &.tel {
+        width: 10px;
+        height: 16px;
+      }
     }
   }
 }

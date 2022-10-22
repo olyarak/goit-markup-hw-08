@@ -8,6 +8,10 @@
   @include tablet {
     margin-right: 87px;
   }
+
+  @include desktop {
+    margin-right: 92px;
+  }
 }
 
 .page-header__logo {

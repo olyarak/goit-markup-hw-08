@@ -27,6 +27,10 @@
     margin: 15px;
     width: calc((100% - 4 * 15px) / 2);
   }
+
+  @include desktop {
+    width: calc((100% - 8 * 15px) / 4);
+  }
 }
 
 .team-list__image {

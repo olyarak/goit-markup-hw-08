@@ -15,6 +15,10 @@
     margin: 15px;
     width: calc((100% - 4 * 15px) / 2);
   }
+
+  @include desktop {
+    width: calc((100% - 8 * 15px) / 4);
+  }
 }
 
 .features-list__thumb {
@@ -24,7 +28,6 @@
   padding-top: 25px;
   padding-bottom: 25px;
 
-  max-width: 450px;
   margin-bottom: 30px;
 
   background-color: $secondary-background-color;
@@ -34,10 +37,14 @@
 .features-list__title {
   margin-bottom: 10px;
   color: $primary-text-color;
+  text-align: center;
 
   @include font(14px, 1.14);
   text-transform: uppercase;
-  text-align: center;
+
+  @include tablet {
+    text-align: start;
+  }
 }
 
 .features-list__text {
